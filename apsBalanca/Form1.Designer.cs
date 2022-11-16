@@ -38,28 +38,27 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelPeso = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblProteinaValue = new System.Windows.Forms.Label();
+            this.lblGorduraValue = new System.Windows.Forms.Label();
+            this.lblCaloriaValue = new System.Windows.Forms.Label();
+            this.lblProteina = new System.Windows.Forms.Label();
+            this.lblGordura = new System.Windows.Forms.Label();
+            this.lblCaloria = new System.Windows.Forms.Label();
+            this.lblCarbo = new System.Windows.Forms.Label();
+            this.lblCarboValue = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPeso = new System.Windows.Forms.Label();
             this.lblKG = new System.Windows.Forms.Label();
             this.btnCalibrar = new System.Windows.Forms.Button();
+            this.cbAlimentos = new System.Windows.Forms.ComboBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cbAlimentos = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblCarbo = new System.Windows.Forms.Label();
-            this.lblCaloria = new System.Windows.Forms.Label();
-            this.lblGordura = new System.Windows.Forms.Label();
-            this.lblProteina = new System.Windows.Forms.Label();
-            this.lblCarboValue = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblCaloriaValue = new System.Windows.Forms.Label();
-            this.lblGorduraValue = new System.Windows.Forms.Label();
-            this.lblProteinaValue = new System.Windows.Forms.Label();
-            this.btnOk = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.panelPeso.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -146,7 +145,6 @@
             // panelPeso
             // 
             this.panelPeso.BackColor = System.Drawing.Color.White;
-            this.panelPeso.Controls.Add(this.btnOk);
             this.panelPeso.Controls.Add(this.tableLayoutPanel1);
             this.panelPeso.Controls.Add(this.groupBox1);
             this.panelPeso.Controls.Add(this.cbAlimentos);
@@ -156,6 +154,133 @@
             this.panelPeso.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.panelPeso.Size = new System.Drawing.Size(518, 329);
             this.panelPeso.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblProteinaValue, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblGorduraValue, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCaloriaValue, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblProteina, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblGordura, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCaloria, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblCarbo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblCarboValue, 1, 0);
+            this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(262, 89);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(219, 77);
+            this.tableLayoutPanel1.TabIndex = 22;
+            // 
+            // lblProteinaValue
+            // 
+            this.lblProteinaValue.AutoSize = true;
+            this.lblProteinaValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblProteinaValue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblProteinaValue.Location = new System.Drawing.Point(112, 54);
+            this.lblProteinaValue.Name = "lblProteinaValue";
+            this.lblProteinaValue.Size = new System.Drawing.Size(16, 18);
+            this.lblProteinaValue.TabIndex = 23;
+            this.lblProteinaValue.Text = "0";
+            // 
+            // lblGorduraValue
+            // 
+            this.lblGorduraValue.AutoSize = true;
+            this.lblGorduraValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblGorduraValue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblGorduraValue.Location = new System.Drawing.Point(112, 36);
+            this.lblGorduraValue.Name = "lblGorduraValue";
+            this.lblGorduraValue.Size = new System.Drawing.Size(16, 18);
+            this.lblGorduraValue.TabIndex = 23;
+            this.lblGorduraValue.Text = "0";
+            // 
+            // lblCaloriaValue
+            // 
+            this.lblCaloriaValue.AutoSize = true;
+            this.lblCaloriaValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCaloriaValue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCaloriaValue.Location = new System.Drawing.Point(112, 18);
+            this.lblCaloriaValue.Name = "lblCaloriaValue";
+            this.lblCaloriaValue.Size = new System.Drawing.Size(16, 18);
+            this.lblCaloriaValue.TabIndex = 23;
+            this.lblCaloriaValue.Text = "0";
+            // 
+            // lblProteina
+            // 
+            this.lblProteina.AutoSize = true;
+            this.lblProteina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblProteina.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblProteina.Location = new System.Drawing.Point(3, 54);
+            this.lblProteina.Name = "lblProteina";
+            this.lblProteina.Size = new System.Drawing.Size(63, 18);
+            this.lblProteina.TabIndex = 6;
+            this.lblProteina.Text = "Proteina";
+            // 
+            // lblGordura
+            // 
+            this.lblGordura.AutoSize = true;
+            this.lblGordura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblGordura.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblGordura.Location = new System.Drawing.Point(3, 36);
+            this.lblGordura.Name = "lblGordura";
+            this.lblGordura.Size = new System.Drawing.Size(63, 18);
+            this.lblGordura.TabIndex = 4;
+            this.lblGordura.Text = "Gordura";
+            // 
+            // lblCaloria
+            // 
+            this.lblCaloria.AutoSize = true;
+            this.lblCaloria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCaloria.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCaloria.Location = new System.Drawing.Point(3, 18);
+            this.lblCaloria.Name = "lblCaloria";
+            this.lblCaloria.Size = new System.Drawing.Size(55, 18);
+            this.lblCaloria.TabIndex = 2;
+            this.lblCaloria.Text = "Caloria";
+            // 
+            // lblCarbo
+            // 
+            this.lblCarbo.AutoSize = true;
+            this.lblCarbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCarbo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCarbo.Location = new System.Drawing.Point(3, 0);
+            this.lblCarbo.Name = "lblCarbo";
+            this.lblCarbo.Size = new System.Drawing.Size(86, 18);
+            this.lblCarbo.TabIndex = 0;
+            this.lblCarbo.Text = "Carboidrato";
+            // 
+            // lblCarboValue
+            // 
+            this.lblCarboValue.AutoSize = true;
+            this.lblCarboValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblCarboValue.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCarboValue.Location = new System.Drawing.Point(112, 0);
+            this.lblCarboValue.Name = "lblCarboValue";
+            this.lblCarboValue.Size = new System.Drawing.Size(16, 18);
+            this.lblCarboValue.TabIndex = 10;
+            this.lblCarboValue.Text = "0";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblPeso);
+            this.groupBox1.Controls.Add(this.lblKG);
+            this.groupBox1.Controls.Add(this.btnCalibrar);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(27, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(208, 296);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Balança";
             // 
             // lblPeso
             // 
@@ -198,16 +323,6 @@
             this.btnCalibrar.UseVisualStyleBackColor = false;
             this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
             // 
-            // serialPort
-            // 
-            this.serialPort.PortName = "COM6";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // cbAlimentos
             // 
             this.cbAlimentos.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -224,147 +339,17 @@
             this.cbAlimentos.Size = new System.Drawing.Size(167, 24);
             this.cbAlimentos.TabIndex = 20;
             this.cbAlimentos.Text = "Selecione um alimento";
+            this.cbAlimentos.SelectedIndexChanged += new System.EventHandler(this.cbAlimentos_SelectedIndexChanged);
             // 
-            // groupBox1
+            // serialPort
             // 
-            this.groupBox1.Controls.Add(this.lblPeso);
-            this.groupBox1.Controls.Add(this.lblKG);
-            this.groupBox1.Controls.Add(this.btnCalibrar);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(27, 21);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 296);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Balança";
+            this.serialPort.PortName = "COM6";
             // 
-            // lblCarbo
+            // timer1
             // 
-            this.lblCarbo.AutoSize = true;
-            this.lblCarbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblCarbo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCarbo.Location = new System.Drawing.Point(3, 0);
-            this.lblCarbo.Name = "lblCarbo";
-            this.lblCarbo.Size = new System.Drawing.Size(86, 18);
-            this.lblCarbo.TabIndex = 0;
-            this.lblCarbo.Text = "Carboidrato";
-            // 
-            // lblCaloria
-            // 
-            this.lblCaloria.AutoSize = true;
-            this.lblCaloria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblCaloria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCaloria.Location = new System.Drawing.Point(3, 18);
-            this.lblCaloria.Name = "lblCaloria";
-            this.lblCaloria.Size = new System.Drawing.Size(55, 18);
-            this.lblCaloria.TabIndex = 2;
-            this.lblCaloria.Text = "Caloria";
-            // 
-            // lblGordura
-            // 
-            this.lblGordura.AutoSize = true;
-            this.lblGordura.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblGordura.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblGordura.Location = new System.Drawing.Point(3, 36);
-            this.lblGordura.Name = "lblGordura";
-            this.lblGordura.Size = new System.Drawing.Size(63, 18);
-            this.lblGordura.TabIndex = 4;
-            this.lblGordura.Text = "Gordura";
-            // 
-            // lblProteina
-            // 
-            this.lblProteina.AutoSize = true;
-            this.lblProteina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblProteina.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblProteina.Location = new System.Drawing.Point(3, 54);
-            this.lblProteina.Name = "lblProteina";
-            this.lblProteina.Size = new System.Drawing.Size(63, 18);
-            this.lblProteina.TabIndex = 6;
-            this.lblProteina.Text = "Proteina";
-            // 
-            // lblCarboValue
-            // 
-            this.lblCarboValue.AutoSize = true;
-            this.lblCarboValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblCarboValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCarboValue.Location = new System.Drawing.Point(112, 0);
-            this.lblCarboValue.Name = "lblCarboValue";
-            this.lblCarboValue.Size = new System.Drawing.Size(16, 18);
-            this.lblCarboValue.TabIndex = 10;
-            this.lblCarboValue.Text = "0";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblProteinaValue, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblGorduraValue, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblCaloriaValue, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblProteina, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblGordura, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblCaloria, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblCarbo, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblCarboValue, 1, 0);
-            this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(262, 89);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(219, 77);
-            this.tableLayoutPanel1.TabIndex = 22;
-            // 
-            // lblCaloriaValue
-            // 
-            this.lblCaloriaValue.AutoSize = true;
-            this.lblCaloriaValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblCaloriaValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCaloriaValue.Location = new System.Drawing.Point(112, 18);
-            this.lblCaloriaValue.Name = "lblCaloriaValue";
-            this.lblCaloriaValue.Size = new System.Drawing.Size(16, 18);
-            this.lblCaloriaValue.TabIndex = 23;
-            this.lblCaloriaValue.Text = "0";
-            // 
-            // lblGorduraValue
-            // 
-            this.lblGorduraValue.AutoSize = true;
-            this.lblGorduraValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblGorduraValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblGorduraValue.Location = new System.Drawing.Point(112, 36);
-            this.lblGorduraValue.Name = "lblGorduraValue";
-            this.lblGorduraValue.Size = new System.Drawing.Size(16, 18);
-            this.lblGorduraValue.TabIndex = 23;
-            this.lblGorduraValue.Text = "0";
-            // 
-            // lblProteinaValue
-            // 
-            this.lblProteinaValue.AutoSize = true;
-            this.lblProteinaValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblProteinaValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblProteinaValue.Location = new System.Drawing.Point(112, 54);
-            this.lblProteinaValue.Name = "lblProteinaValue";
-            this.lblProteinaValue.Size = new System.Drawing.Size(16, 18);
-            this.lblProteinaValue.TabIndex = 23;
-            this.lblProteinaValue.Text = "0";
-            // 
-            // btnOk
-            // 
-            this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(137)))));
-            this.btnOk.FlatAppearance.BorderSize = 0;
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnOk.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnOk.Location = new System.Drawing.Point(435, 34);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(42, 30);
-            this.btnOk.TabIndex = 20;
-            this.btnOk.Text = "->";
-            this.btnOk.UseVisualStyleBackColor = false;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormPrincipal
             // 
@@ -382,10 +367,10 @@
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.panelPeso.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -416,7 +401,6 @@
         private System.Windows.Forms.Label lblCaloria;
         private System.Windows.Forms.Label lblCarbo;
         private System.Windows.Forms.Label lblCarboValue;
-        private System.Windows.Forms.Button btnOk;
     }
 }
 
