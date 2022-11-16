@@ -1,0 +1,14 @@
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\bin\Debug\apsBalanca.exe.config
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\bin\Debug\apsBalanca.exe
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\bin\Debug\apsBalanca.pdb
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.csproj.AssemblyReference.cache
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.csproj.SuggestedBindingRedirects.cache
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.FormPrincipal.resources
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.Properties.Resources.resources
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.csproj.GenerateResource.cache
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.csproj.CoreCompileInputs.cache
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.exe
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.pdb
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\bin\Debug\PagedList.dll
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\bin\Debug\PagedList.xml
+C:\Users\utayk\source\repos\apsBalanca\apsBalanca\obj\Debug\apsBalanca.csproj.CopyComplete
