@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>balancadavida.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -95,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\001-body-scale2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balancadavida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="balancadavida.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

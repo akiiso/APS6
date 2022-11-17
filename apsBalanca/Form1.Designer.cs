@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSobre = new System.Windows.Forms.Button();
-            this.btnMenuPeso = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlTitulo = new System.Windows.Forms.Panel();
@@ -54,7 +52,11 @@
             this.cbAlimentos = new System.Windows.Forms.ComboBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSobre = new System.Windows.Forms.Button();
+            this.btnMenuPeso = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.panelPeso.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,54 +72,17 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(147, 376);
+            this.panelMenu.Size = new System.Drawing.Size(121, 376);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btnSobre
-            // 
-            this.btnSobre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSobre.FlatAppearance.BorderSize = 0;
-            this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSobre.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
-            this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSobre.Location = new System.Drawing.Point(0, 84);
-            this.btnSobre.Name = "btnSobre";
-            this.btnSobre.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnSobre.Size = new System.Drawing.Size(147, 37);
-            this.btnSobre.TabIndex = 2;
-            this.btnSobre.Text = "  Sobre";
-            this.btnSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSobre.UseVisualStyleBackColor = true;
-            this.btnSobre.Click += new System.EventHandler(this.btnMenuSobre_Click);
-            // 
-            // btnMenuPeso
-            // 
-            this.btnMenuPeso.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuPeso.FlatAppearance.BorderSize = 0;
-            this.btnMenuPeso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnMenuPeso.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMenuPeso.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPeso.Image")));
-            this.btnMenuPeso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuPeso.Location = new System.Drawing.Point(0, 47);
-            this.btnMenuPeso.Name = "btnMenuPeso";
-            this.btnMenuPeso.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnMenuPeso.Size = new System.Drawing.Size(147, 37);
-            this.btnMenuPeso.TabIndex = 1;
-            this.btnMenuPeso.Text = "  Pesar";
-            this.btnMenuPeso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuPeso.UseVisualStyleBackColor = true;
-            this.btnMenuPeso.Click += new System.EventHandler(this.btnMenuPeso_Click);
             // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
+            this.panelLogo.Controls.Add(this.lblLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(147, 47);
+            this.panelLogo.Size = new System.Drawing.Size(121, 47);
             this.panelLogo.TabIndex = 0;
             // 
             // pnlTitulo
@@ -126,9 +91,9 @@
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.pnlTitulo.Location = new System.Drawing.Point(147, 0);
+            this.pnlTitulo.Location = new System.Drawing.Point(121, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(518, 47);
+            this.pnlTitulo.Size = new System.Drawing.Size(544, 47);
             this.pnlTitulo.TabIndex = 1;
             // 
             // lblTitulo
@@ -149,10 +114,10 @@
             this.panelPeso.Controls.Add(this.groupBox1);
             this.panelPeso.Controls.Add(this.cbAlimentos);
             this.panelPeso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPeso.Location = new System.Drawing.Point(147, 47);
+            this.panelPeso.Location = new System.Drawing.Point(121, 47);
             this.panelPeso.Name = "panelPeso";
             this.panelPeso.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panelPeso.Size = new System.Drawing.Size(518, 329);
+            this.panelPeso.Size = new System.Drawing.Size(544, 329);
             this.panelPeso.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -189,6 +154,7 @@
             this.lblProteinaValue.Size = new System.Drawing.Size(16, 18);
             this.lblProteinaValue.TabIndex = 23;
             this.lblProteinaValue.Text = "0";
+            this.lblProteinaValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblGorduraValue
             // 
@@ -200,6 +166,7 @@
             this.lblGorduraValue.Size = new System.Drawing.Size(16, 18);
             this.lblGorduraValue.TabIndex = 23;
             this.lblGorduraValue.Text = "0";
+            this.lblGorduraValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblCaloriaValue
             // 
@@ -211,6 +178,7 @@
             this.lblCaloriaValue.Size = new System.Drawing.Size(16, 18);
             this.lblCaloriaValue.TabIndex = 23;
             this.lblCaloriaValue.Text = "0";
+            this.lblCaloriaValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblProteina
             // 
@@ -266,6 +234,7 @@
             this.lblCarboValue.Size = new System.Drawing.Size(16, 18);
             this.lblCarboValue.TabIndex = 10;
             this.lblCarboValue.Text = "0";
+            this.lblCarboValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // groupBox1
             // 
@@ -348,8 +317,58 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 600;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnSobre
+            // 
+            this.btnSobre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSobre.Enabled = false;
+            this.btnSobre.FlatAppearance.BorderSize = 0;
+            this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSobre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
+            this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSobre.Location = new System.Drawing.Point(0, 84);
+            this.btnSobre.Name = "btnSobre";
+            this.btnSobre.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnSobre.Size = new System.Drawing.Size(121, 37);
+            this.btnSobre.TabIndex = 2;
+            this.btnSobre.Text = "  Sobre";
+            this.btnSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSobre.UseVisualStyleBackColor = true;
+            this.btnSobre.Click += new System.EventHandler(this.btnMenuSobre_Click);
+            // 
+            // btnMenuPeso
+            // 
+            this.btnMenuPeso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuPeso.FlatAppearance.BorderSize = 0;
+            this.btnMenuPeso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnMenuPeso.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMenuPeso.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuPeso.Image")));
+            this.btnMenuPeso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuPeso.Location = new System.Drawing.Point(0, 47);
+            this.btnMenuPeso.Name = "btnMenuPeso";
+            this.btnMenuPeso.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnMenuPeso.Size = new System.Drawing.Size(121, 37);
+            this.btnMenuPeso.TabIndex = 1;
+            this.btnMenuPeso.Text = "  Pesar";
+            this.btnMenuPeso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuPeso.UseVisualStyleBackColor = true;
+            this.btnMenuPeso.Click += new System.EventHandler(this.btnMenuPeso_Click);
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLogo.Location = new System.Drawing.Point(33, 9);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(52, 32);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Text = "BV";
             // 
             // FormPrincipal
             // 
@@ -361,9 +380,12 @@
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = "Balanca da Vida";
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             this.panelPeso.ResumeLayout(false);
@@ -401,6 +423,7 @@
         private System.Windows.Forms.Label lblCaloria;
         private System.Windows.Forms.Label lblCarbo;
         private System.Windows.Forms.Label lblCarboValue;
+        private System.Windows.Forms.Label lblLogo;
     }
 }
 

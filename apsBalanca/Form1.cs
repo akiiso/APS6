@@ -21,24 +21,24 @@ namespace apsBalanca
         {
             new FoodValue
             {
-                Caloria = 10,
-                Carboidrato = 15,
-                Gordura = 20,
-                Proteina = 45
-            },            
-            new FoodValue
-            {  
-                Caloria = 10,
-                Carboidrato = 15,
-                Gordura = 20,
-                Proteina = 45
+                Caloria = 0.53,
+                Carboidrato = 0.1190,
+                Gordura = 0.00425,
+                Proteina = 0.0030
             },
             new FoodValue
-            {   
-                Caloria = 10,
-                Carboidrato = 15,
-                Gordura = 20,
-                Proteina = 45
+            {
+                Caloria = 0.47,
+                Carboidrato = 0.12,
+                Gordura = 0.001,
+                Proteina = 0.009
+            },
+            new FoodValue
+            {
+                Caloria = 1.30,
+                Carboidrato = 0.2817,
+                Gordura = 0.0028,
+                Proteina = 0.0269
             },
         };
 
@@ -100,8 +100,9 @@ namespace apsBalanca
 
         private void btnMenuPeso_Click(object sender, EventArgs e)
         {
+            if (!serialPort.IsOpen)
+                serialPort.Open();
 
-            serialPort.Open();
 
             lblTitulo.Text = "Pesar";
             ActivateButton(sender);
@@ -110,7 +111,9 @@ namespace apsBalanca
 
         private void btnMenuSobre_Click(object sender, EventArgs e)
         {
-            serialPort.Close();
+            if (serialPort.IsOpen)  
+                serialPort.Close(); 
+
             lblTitulo.Text = "Sobre";
             ActivateButton(sender);
             panelPeso.Hide();
@@ -119,12 +122,19 @@ namespace apsBalanca
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Random random = new Random();
-            lblPeso.Text = random.Next(100, 400).ToString();
-            //if (serialPort.IsOpen)
-            //{
-            //    lblPeso.Text = serialPort.ReadLine();
-            //}
+            try
+            {
+                if (serialPort.IsOpen)
+                {
+                    lblPeso.Text = serialPort.ReadLine();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblPeso.Text = ex.Message;
+            }
+
+
 
             if (cbAlimentos.SelectedIndex != -1)
             {
@@ -132,12 +142,12 @@ namespace apsBalanca
                 lblProteinaValue.Text = (Convert.ToDouble(lblPeso.Text) * FoodValues[cbAlimentos.SelectedIndex].Proteina).ToString() + " g";
                 lblGorduraValue.Text = (Convert.ToDouble(lblPeso.Text) * FoodValues[cbAlimentos.SelectedIndex].Gordura).ToString() + " g";
                 lblCaloriaValue.Text = (Convert.ToDouble(lblPeso.Text) * FoodValues[cbAlimentos.SelectedIndex].Caloria).ToString() + " g";
-            }            
+            }
         }
 
         private void btnCalibrar_Click(object sender, EventArgs e)
         {
-            //serialPort.Write("t");
+            serialPort.Write("t");
             timer1.Enabled = true;
             timer1.Stop();
             Thread.Sleep(500);
@@ -147,7 +157,7 @@ namespace apsBalanca
 
         private void cbAlimentos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private class FoodValue
